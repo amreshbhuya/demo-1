@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse a Number</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9fbe7, #e0f2f1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    h2 {
+      color: #33691e;
+      margin-bottom: 25px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #689f38;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #558b2f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #33691e;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>🔁 Reverse a Number</h2>
+    <input type="number" id="numInput" placeholder="Enter a number" />
+    <button onclick="reverseNumber()">Reverse</button>
+    <div class="result" id="output">Result will appear here...</div>
+  </div>
+
+  <script>
+    function reverseNumber() {
+      let num = document.getElementById("numInput").value;
+      let output = document.getElementById("output");
+
+      if (num === "") {
+        output.innerText = "❌ Please enter a number!";
+        return;
+      }
+
+      let reversed = parseInt(num.toString().split('').reverse().join(''));
+      output.innerText = `✅ Reverse of ${num} is ${reversed}`;
+    }
+  </script>
+
+</body>
+</html>

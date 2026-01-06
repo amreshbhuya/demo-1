@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        /* Header Styles */
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .form-header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            color: #7f8c8d;
+            margin: 0;
+        }
+        
+        /* Form Styles */
+        .application-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .full-width {
+            grid-column: span 2;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border 0.3s ease;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Radio & Checkbox Styles */
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input, .checkbox-option input {
+            margin-right: 8px;
+        }
+        
+        /* File Upload */
+        .file-upload {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .file-upload-label {
+            display: inline-block;
+            padding: 12px;
+            background: #f8f9fa;
+            border: 1px dashed #ddd;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-label:hover {
+            background: #e9ecef;
+            border-color: #3498db;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            grid-column: span 2;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .application-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .full-width, .submit-btn {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Job Application Form</h1>
+            <p>Please fill out all required fields to apply for this position</p>
+        </div>
+        
+        <form class="application-form">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <!-- Professional Information -->
+            <div class="form-group full-width">
+                <label for="position">Position Applied For *</label>
+                <input type="text" id="position" name="position" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Years of Experience *</label>
+                <select id="experience" name="experience" required>
+                    <option value="">Select...</option>
+                    <option value="0-2">0-2 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="6-10">6-10 years</option>
+                    <option value="10+">10+ years</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="availability">Available Start Date *</label>
+                <input type="date" id="availability" name="availability" required>
+            </div>
+            
+            <!-- Employment Eligibility -->
+            <div class="form-group full-width">
+                <label>Are you legally eligible to work in this country? *</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="eligible-yes" name="eligible" value="yes" required>
+                        <label for="eligible-yes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="eligible-no" name="eligible" value="no">
+                        <label for="eligible-no">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cover Letter -->
+            <div class="form-group full-width">
+                <label for="cover-letter">Cover Letter *</label>
+                <textarea id="cover-letter" name="cover-letter" placeholder="Tell us why you're a good fit for this position..." required></textarea>
+            </div>
+            
+            <!-- Resume Upload -->
+            <div class="form-group full-width">
+                <label for="resume">Upload Resume (PDF or DOC) *</label>
+                <div class="file-upload">
+                    <label for="resume" class="file-upload-label">Choose File or Drag Here</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required style="display: none;">
+                </div>
+            </div>
+            
+            <!-- References -->
+            <div class="form-group full-width">
+                <label>References (optional)</label>
+                <textarea id="references" name="references" placeholder="Please list 2-3 professional references with contact information"></textarea>
+            </div>
+            
+            <!-- Terms -->
+            <div class="form-group full-width">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I certify that all information provided is accurate and complete *</label>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

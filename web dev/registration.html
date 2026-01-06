@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body bgcolor="lightpink" align="center">
+
+    <h2 style="font-family: 'Arial', sans-serif; color: darkred; font-size: 40px; text-shadow: 2px 2px 5px gray; margin-top: 50px;">Register</h2>
+
+    <div style="width: 320px; background-color: white; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 20px gray; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <form action="registration_process.php" method="POST">
+            <label for="username" style="font-size: 20px; color: darkred; font-weight: bold;">Username:</label><br>
+            <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid gray;"><br>
+
+            <label for="email" style="font-size: 20px; color: darkred; font-weight: bold;">Email:</label><br>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid gray;"><br>
+
+            <label for="password" style="font-size: 20px; color: darkred; font-weight: bold;">Password:</label><br>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid gray;"><br>
+
+            <input type="submit" value="Register" style="width: 100%; padding: 12px; background-color: darkred; color: white; border: none; cursor: pointer; font-size: 18px; border-radius: 5px;">
+        </form>
+        <p style="font-size: 18px; color: darkred; margin-top: 20px;">Already have an account? <a href="login.html" style="color: darkred; font-weight: bold;">Login here</a></p>
+
+    </div>
+
+    
+</body>
+</html>

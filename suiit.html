@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambalpur University Institute of Information Technology (SUIIT)</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            padding: 20px;
+            background: linear-gradient(150deg, rgb(0, 0, 0),rgb(8, 110, 119));
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+            color: white;
+            flex-wrap: wrap;
+            position: relative;
+            height: 100px; /* Height to accommodate the text */
+            backdrop-filter: blur(10px); /* Blurred background effect */
+            border-radius: 10px; /* Rounded corners for a 3D feel */
+            transform: perspective(500px) translateZ(10px); /* 3D effect */
+            transition: all 0.3s ease-in-out;
+        }
+        
+       
+        
+        header img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+       /* Container for text to handle switching */
+.lang-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-left: 150px;
+    margin-top: -30px;
+    overflow: hidden;
+}
+
+.lang-text {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 14s infinite;
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.lang-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.lang-text:nth-child(2) {
+    animation-delay: 5s; /* The next text appears after 3 seconds */
+}
+
+.lang-text:nth-child(3) {
+    animation-delay: 10s; /* The next text appears after 6 seconds */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    10%, 30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70%, 100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Navbar styling */
+        nav {
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(150deg, rgba(0, 0, 0, 0.769),rgba(0, 0, 0, 0.733));
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px); /* Blurred background effect */
+            border-radius: 10px; /* Rounded corners for a 3D feel */
+            transform: perspective(500px) translateZ(10px); /* 3D effect */
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Carousel styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            animation: slide 12s infinite;
+        }
+
+        .carousel img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .carousel img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .carousel img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+         /* Slide animation */
+         @keyframes slide {
+            0%, 100% {
+                opacity: 1;
+            }
+            33%, 66% {
+                opacity: 0;
+            }
+        }
+        .container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        .container1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+       
+
+        section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      
+        .director-container {
+            text-align: center;
+        }
+        .director-container img {
+            width: 200px;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #046655;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo on the left side -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Suiit_logo.png" alt="SUIIT Logo">
+
+        <!-- Text will appear one after another with animations -->
+         
+                <div class="lang-container">
+                    <h1 class="lang-text">Sambalpur University Institute of Information Technology</h1>
+                    <h2 class="lang-text">संबलपुर विश्वविद्यालय सूचना प्रौद्योगिकी संस्थान</h2>
+                    <h3 class="lang-text">ସମ୍ବଲପୁର ବିଶ୍ୱବିଦ୍ୟାଳୟ ସୂଚନା ପ୍ରାଦ୍ୟୋଗିକ ସଂସ୍ଥାନ</h3>
+                  </div>      
+                    <p>
+                        <div class="container1">Established in 2010 as an autonomous constituent institute of Sambalpur University in the line of IIITs.</div>
+                        <br>
+                        <div class="container">Leveraging Technology - Inspiring Innovation - Flourishing Mankind</div>
+                    </p>
+                    
+                    </div>         
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#director">Director's Message</a></li>
+            <li><a href="#programs">Academic Programs</a></li>
+            <li><a href="#accreditation">Accreditation</a></li>
+            <li><a href="https://library.suiit.ac.in">Library</a></li>
+        </ul>
+    </nav>
+    <!-- Carousel for Image Slideshow -->
+    <div class="carousel">
+        <img src="https://suiit.ac.in/wp-content/uploads/slider/cache/11b8b6ac6efa8ae2eaf0fd91d4f5a777/WhatsApp-Image-2024-09-21-at-7.35.50-PM.jpg" alt="SUIIT Campus">
+        <img src="https://suiit.ac.in/wp-content/uploads/slider/cache/205ba666b9eda28a06c589a23f8c3470/324589817_557140769376323_4884909770131334877_n.jpg" alt="SUIIT Campus">
+        <img src="https://images.shiksha.com/mediadata/images/1497349710phpKfcgeu.jpeg" alt="SUIIT Campus">
+   
+    </div>
+    
+    
+
+    <!-- Navbar -->
+    
+
+    <section id="overview" style="background-color: #f4f4f4; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Overview</h2>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            Sambalpur University Institute of Information Technology (SUIIT), located in Burla, Odisha, is a premier institution dedicated to providing the center of excellence in Computer Science, Electronics, Electrical Engineering, and allied disciplines. As a part of the esteemed Sambalpur University, SUIIT stands at the forefront of academic excellence, fostering innovation and pioneering research to prepare students for a rapidly evolving technological landscape.
+        </p>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            The institute offers undergraduate and postgraduate programs emphasizing a strong foundation in theory and practical application, ensuring that students are well-equipped to meet the challenges of the modern tech industry. SUIIT is committed to fostering an environment that nurtures creativity, problem-solving skills, and critical thinking, enabling students to become leaders in their respective fields.
+        </p>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            SUIIT has earned recognition for its quality education and infrastructure. The institute has been accredited with an ‘A’ grade by the National Assessment and Accreditation Council (NAAC), a testament to its commitment to maintaining high academic standards. Also, approved by the All India Council for Technical Education (AICTE), further enhancing its credibility and ensuring that its programs meet the highest national standards for technical education.
+        </p>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            With state-of-the-art laboratories, a robust research culture, and a collaborative approach to learning, SUIIT continues to be a hub for innovation and a beacon of excellence in technical education. Its strong emphasis on research and development, along with strategic industry partnerships, provides students ample opportunities to engage with real-world problems and contribute to groundbreaking technological advancements.
+        </p>
+    </section>
+    
+    
+    <section id="mission" style="background-color: #eaf2f8; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Mission</h2>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            Our mission is to cultivate future leaders through exceptional research in Information Technology and related fields, developing a proficient workforce dedicated to guiding the nation towards a prosperous future.
+        </p>
+    </section>
+    
+    
+    <section id="vision" style="background-color: #f4f4f4; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Vision</h2>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            To enlighten the young minds by giving patronage to the unsatisfied thirst for knowledge, to contribute to mankind through excellence in scientific and technological education and research, to prove to be a valuable resource for industry and society alike and to remain a symbol of pride for all Indians.
+        </p>
+    </section>
+    
+    
+    <section id="director" class="director-container" style="background-color: #eaf2f8; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Director's Message</h2>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnOYPGNgL3qdfNiQegWrtoA_1ZdMUO_leKzPhUknVVd9Pr8ua5Mz2ZLei40ivnuDI7xiibXsPYWRmzjDNV1bwAhCC4W12Hr1iZIfTXmhrn27SOrXeNh8Ws5mBX2Qmbc1wvIKlEbRQ61EnjBCV71NJXfydiItKKMjtjpf5lhNcDXWAtpSQf6HKO3T6PUgM/s1000/Untitled%20design.png" alt="Director">
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            At SUIIT, we are dedicated to providing quality education and fostering a culture of innovation and creativity. With a decade of excellence, SUIIT continues to shape leaders of tomorrow, empowering students with technical expertise and interdisciplinary knowledge. Supported by highly qualified faculty and state-of-the-art infrastructure, we are committed to nurturing talent and contributing to the nation’s progress.
+        </p>
+        <p style="font-weight: bold; color: #2c3e50;">- Dr. Sudarson Jena, Director</p>
+    </section>
+    
+    
+    <section id="programs" style="background-color: #f4f4f4; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Academic Programs</h2>
+        <ul style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            <li>Computer Science and Engineering (CSE)</li>
+            <li>Computer Science and Engineering with Specialization in Artificial Intelligence (AI) and Machine Learning (ML)</li>
+            <li>Computer Science and Engineering with Specialization in Information and Cyber Security (ICS)</li>
+            <li>Electrical and Electronics Engineering (EEE)</li>
+            <li>Electronics and Communication Engineering (ECE)</li>
+        </ul>
+    </section>
+    
+    
+    <section id="accreditation" style="background-color: #eaf2f8; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #2c3e50;">Accreditation</h2>
+        <p style="line-height: 1.6; font-size: 16px; color: #34495e;">
+            SUIIT has earned recognition for its quality education and infrastructure, ensuring that it meets the highest standards in technical education and is committed to continuous improvement and excellence.
+        </p>
+    </section>
+    
+    
+    <footer style="background-color: #2c3e50; color: white; padding: 20px; text-align: center;">
+        <p>&copy; 2025 Sambalpur University Institute of Information Technology. All rights reserved.</p>
+        <p>Website: <a href="https://www.suiit.ac.in" target="_blank" style="color: #ffcc00;">www.suiit.ac.in</a></p>
+    </footer>
+</body>
+</html>

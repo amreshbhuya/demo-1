@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Pop-up & Logic Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #004d40;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      margin-top: 15px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+      transform: scale(1.03);
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 100%;
+      border: 2px solid #009688;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .output {
+      background-color: #e0f2f1;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      color: #004d40;
+      font-size: 16px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Popup & Logic Playground</h1>
+
+  <!-- a) Display Date -->
+  <div class="card">
+    <h3>a) Display Current Date</h3>
+    <button onclick="displayDate()">Show Date</button>
+    <input type="text" id="dateBox" placeholder="Date will appear here">
+  </div>
+
+  <!-- b) Factorial -->
+  <div class="card">
+    <h3>b) Find Factorial using Prompt</h3>
+    <button onclick="factorial()">Calculate Factorial</button>
+    <div class="output" id="factOutput"></div>
+  </div>
+
+  <!-- c) Multiplication Table -->
+  <div class="card">
+    <h3>c) Multiplication Table (1-10)</h3>
+    <button onclick="multiplicationTable()">Show Table</button>
+    <div class="output" id="tableOutput"></div>
+  </div>
+
+  <!-- d) Sum of N Numbers -->
+  <div class="card">
+    <h3>d) Sum of N Numbers (using Confirm)</h3>
+    <button onclick="sumN()">Calculate Sum</button>
+    <div class="output" id="sumOutput"></div>
+  </div>
+
+  <script>
+    // a) Display Date
+    function displayDate() {
+      const today = new Date().toDateString();
+      document.getElementById("dateBox").value = today;
+    }
+
+    // b) Factorial
+    function factorial() {
+      const n = parseInt(prompt("Enter a number to find its factorial:"));
+      const output = document.getElementById("factOutput");
+
+      if (isNaN(n) || n < 0) {
+        output.innerText = "❌ Please enter a valid non-negative number.";
+        return;
+      }
+
+      let result = 1;
+      for (let i = 2; i <= n; i++) result *= i;
+
+      alert(`Factorial of ${n} is ${result}`);
+      output.innerText = `✅ Factorial of ${n} is: ${result}`;
+    }
+
+    // c) Multiplication Table
+    function multiplicationTable() {
+      const n = parseInt(prompt("Enter a number to generate its multiplication table:"));
+      const output = document.getElementById("tableOutput");
+
+      if (isNaN(n)) {
+        output.innerText = "❌ Invalid input.";
+        return;
+      }
+
+      let table = `📘 Multiplication Table of ${n}:\n`;
+      for (let i = 1; i <= 10; i++) {
+        table += `${n} × ${i} = ${n * i}\n`;
+      }
+
+      alert(table);
+      output.innerText = table;
+    }
+
+    // d) Sum of N numbers
+    function sumN() {
+      let n = parseInt(prompt("How many numbers do you want to add?"));
+      const output = document.getElementById("sumOutput");
+
+      if (isNaN(n) || n <= 0) {
+        output.innerText = "❌ Please enter a valid count.";
+        return;
+      }
+
+      let sum = 0, count = 0;
+
+      for (let i = 1; i <= n; i++) {
+        let number = parseFloat(prompt(`Enter number ${i}:`));
+        if (isNaN(number)) {
+          alert("Invalid input. Stopping early.");
+          break;
+        }
+        sum += number;
+        count++;
+
+        if (i < n && !confirm("Do you want to add another number?")) {
+          break;
+        }
+      }
+
+      alert(`You entered ${count} numbers.\nSum is: ${sum}`);
+      output.innerText = `➕ Total numbers entered: ${count}\n🔢 Sum: ${sum}`;
+    }
+  </script>
+
+</body>
+</html>

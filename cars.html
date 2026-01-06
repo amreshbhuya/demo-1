@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aedia Car Showroom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #eaeaea, #f4f4f4);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('https://motoringworld.in/wp-content/uploads/2024/05/2024-bmw-3-series-1.jpg') no-repeat center center / cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .iframe-container {
+            flex: 1;
+            padding-right: 20px;
+            min-width: 350px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cars-list {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding-left: 20px;
+        }
+        .car-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .car-item:hover {
+            transform: scale(1.05);
+        }
+        .car-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .car-item .details {
+            padding: 15px;
+            text-align: center;
+        }
+        .car-item h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .car-item p {
+            font-size: 1rem;
+            color: #34495e;
+        }
+        .car-item .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #e74c3c;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aedia Car Showroom</h1>
+    <p>Your dream car is just a click away. Explore a wide range of cars from the most trusted brands.</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Cars</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+</nav>
+<div class="iframe-container">
+    <iframe src="https://www.cars24.com/new-cars/maruti-suzuki/" title="Car Models"></iframe>
+</div>
+<div class="container">
+   
+ <!-- Right side car list -->
+        <div class="cars-list">
+            <!-- Skoda -->
+            <div class="car-item">
+                <img src="https://cdn.skoda-auto.com/images/sites/enin-v2/a71213c6-8d7e-4d75-b8db-0c633fe07cf4/8bca40fc7d92b44e04890e34cfb8852d/HeroBannerModule/d5873a76116765a49a9393a5cabdf63b/6c15c19c9087422c4b3593b63bcd9cadee61d995aa9aa406ecd1beab812bc116/Header_bp1920_1.webp" alt="Skoda Car">
+                <div class="details">
+                    <h2>Skoda</h2>
+                    <p>Elegant and powerful, Skoda brings both luxury and performance to the road. Perfect for those who seek style and substance.</p>
+                    <p class="price">$35,000</p>
+                </div>
+            </div>
+
+            <!-- Audi Q6 -->
+            <div class="car-item">
+                <img src="https://www.tour70.com/wp-content/uploads/2019/09/audi-Q6-luxury-car-taxi-cab-on-rent-e1631995206150-1024x686.jpg" alt="Audi Q6">
+                <div class="details">
+                    <h2>Audi Q6</h2>
+                    <p>Luxury at its finest. Audi Q6 offers unmatched performance with an exceptional design and cutting-edge technology.</p>
+                    <p class="price">$50,000</p>
+                </div>
+            </div>
+
+            <!-- Audi A4 -->
+            <div class="car-item">
+                <img src="https://banner2.cleanpng.com/20180623/aws/kisspng-2017-audi-a4-car-audi-a5-luxury-vehicle-2009-audi-a4-5b2ec08ac307a5.8156929515297906027989.jpg" alt="Audi A4">
+                <div class="details">
+                    <h2>Audi A4</h2>
+                    <p>Compact luxury sedan designed for modern drivers who appreciate technology, comfort, and high performance.</p>
+                    <p class="price">$40,000</p>
+                </div>
+            </div>
+
+            <!-- Volkswagen Virtus -->
+            <div class="car-item">
+                <img src="https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-mofa-1?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTgwMCZiZmM9b2ZmJjU0MDQ=" alt="Volkswagen Virtus">
+                <div class="details">
+                    <h2>Volkswagen Virtus</h2>
+                    <p>Comfort and performance. The Virtus is perfect for those who need both spaciousness and sporty appeal.</p>
+                    <p class="price">$25,000</p>
+                </div>
+            </div>
+
+            <!-- Suzuki Swift -->
+            <div class="car-item">
+                <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/159099/swift-exterior-right-front-three-quarter.jpeg?isig=0" alt="Suzuki Swift">
+                <div class="details">
+                    <h2>Suzuki Swift</h2>
+                    <p>Compact and efficient. Perfect for urban driving with excellent fuel efficiency and a fun-to-drive factor.</p>
+                    <p class="price">$15,000</p>
+                </div>
+            </div>
+
+            <!-- Suzuki Dzire -->
+            <div class="car-item">
+                <img src="https://imgd-ct.aeplcdn.com/272x170/n/cw/ec/170299/dzire-2024-right-front-three-quarter.jpeg?isig=0&q=80" alt="Suzuki Dzire">
+                <div class="details">
+                    <h2>Suzuki Dzire</h2>
+                    <p>Comfortable family sedan with all the right features for a safe and pleasant drive, ideal for daily commuting.</p>
+                    <p class="price">$18,000</p>
+                </div>
+            </div>
+
+            <!-- Maruti Suzuki -->
+            <div class="car-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxP6YinLUTGRJk9ax3PsOZdcbCg1rJFwftkA&s" alt="Maruti Suzuki">
+                <div class="details">
+                    <h2>Maruti Suzuki</h2>
+                    <p>Reliable and economical. Maruti offers exceptional value and an affordable entry into the world of automobiles.</p>
+                    <p class="price">$10,000</p>
+                </div>
+            </div>
+
+            <!-- Tata Altroz -->
+            <div class="car-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzZnZemicXl61SNYA8WGmibHT_Zsb7vOtX-A&s" alt="Tata Altroz">
+                <div class="details">
+                    <h2>Tata Altroz</h2>
+                    <p>Stylish hatchback with a solid build and efficient performance. A perfect choice for city driving and family trips.</p>
+                    <p class="price">$12,500</p>
+                </div>
+            </div>
+
+            <!-- Hyundai i20 -->
+            <div class="car-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpizvN4KTXZvUmMZ4sLseLxbgZ9bHT8Ygx_A&s" alt="Hyundai i20">
+                <div class="details">
+                    <h2>Hyundai i20</h2>
+                    <p>Premium hatchback offering a blend of modern design and smart technology. Ideal for those who want both style and practicality.</p>
+                    <p class="price">$18,000</p>
+                </div>
+            </div>
+
+            <!-- BMW 3 Series -->
+            <div class="car-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMSghiCVUfynr6iNXvTxRO4vV8rYTphqeaRg&s" alt="BMW 3 Series">
+                <div class="details">
+                    <h2>BMW 3 Series</h2>
+                    <p>Ultimate driving machine. The 3 Series offers exhilarating performance combined with luxurious comfort.</p>
+                    <p class="price">$55,000</p>
+                </div>
+            </div>
+
+            <!-- Mercedes Benz C-Class -->
+            <div class="car-item">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/178535/c-class-exterior-right-front-three-quarter.jpeg?isig=0&q=80" alt="Mercedes Benz C-Class">
+                <div class="details">
+                    <h2>Mercedes Benz C-Class</h2>
+                    <p>Luxurious, stylish, and powerful. The C-Class offers sophisticated features and superb performance.</p>
+                    <p class="price">$60,000</p>
+                </div>
+            </div>
+
+        </div>
+    
+</div>
+
+<footer>
+    <p>&copy; 2025 Aedia Car Showroom. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

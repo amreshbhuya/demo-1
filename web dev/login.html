@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body bgcolor="lightyellow" align="center">
+
+    <h2 style="font-family: 'Arial', sans-serif; color: darkblue; font-size: 40px; text-shadow: 2px 2px 5px gray; margin-top: 50px;">Login</h2>
+
+    <div style="width: 320px; background-color: white; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 20px gray; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <form action="login_process.php" method="POST">
+            <label for="username" style="font-size: 20px; color: darkblue; font-weight: bold;">Username:</label><br>
+            <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid gray;"><br>
+
+            <label for="password" style="font-size: 20px; color: darkblue; font-weight: bold;">Password:</label><br>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid gray;"><br>
+
+            <input type="submit" value="Login" style="width: 100%; padding: 12px; background-color: darkblue; color: white; border: none; cursor: pointer; font-size: 18px; border-radius: 5px;">
+        </form>
+        <p style="font-size: 18px; color: darkblue; margin-top: 20px;">New User? <a href="registration.html" style="color: darkblue; font-weight: bold;">Register here</a></p>
+    </div>
+
+   
+
+</body>
+</html>

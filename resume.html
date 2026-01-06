@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amresh Bhuyan's Resume</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (minimal overrides) -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            background-color: #0f6982;
+            color: white;
+            box-shadow: 0 1px 10px black;
+            text-shadow: 0 1px 10px black;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #055b6b;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        .job, .edu-item, .project {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .job h3, .edu-item h3, .project h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .job p, .edu-item p, .project p {
+            margin-bottom: 0.5rem;
+        }
+        .skills ul, .languages ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .skills li, .languages li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background-color: #066579;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            background-color: #0f6982;
+            color: white;
+            box-shadow: 0 1px 10px black;
+            text-shadow: 0 1px 10px black;
+            padding: 15px 0;
+            position: sticky;
+            bottom: 0;
+            z-index: 1000;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <!-- Header Section -->
+        <header class="header text-center mt-1">
+            <div class="profile-info">
+                <h1>Amresh Bhuyan</h1>
+                <p>Full Stack Web Developer | Android & iOS Developer</p>
+               
+            </div>
+        </header>
+
+        <!-- Career Objective Section -->
+        <section class="career-objective mb-5">
+            <h2>Career Objective</h2>
+            <p>I am a Full Stack Web Developer with expertise in both front-end and back-end technologies. I'm also skilled in Android and iOS mobile application development. Passionate about building innovative, scalable, and user-friendly applications. I am looking for opportunities to contribute to cutting-edge projects and grow in a fast-paced, dynamic environment.</p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="work-experience mb-5">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Full Stack Web Developer - Internship</h3>
+                <p><strong>Company:</strong> Null Classes (Virtual) | <strong>Duration:</strong> Jul 2024 - Present</p>
+                <ul>
+                    <li>Built full-stack web applications using React, Node.js, and MongoDB.</li>
+                    <li>Collaborated with a team to create responsive and interactive user interfaces.</li>
+                    <li>Created RESTful APIs and integrated third-party services.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Full Stack Web Development - Internship</h3>
+                <p><strong>Company:</strong> INTERSHALA (Virtual) | <strong>Duration:</strong> Apr 2024 - Jun 2024</p>
+                <ul>
+                    <li>Completed a comprehensive web development training program focusing on HTML, CSS, JS, PHP, and React.</li>
+                    <li>Worked on front-end projects to implement responsive web design and functionality.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Software Developer</h3>
+                <p><strong>Company:</strong> Sambalpur University Institute of Information Technology (SUIIT) | <strong>Duration:</strong> May 2023 - Present</p>
+                <ul>
+                    <li>Developed a Library Management System, improving resource tracking and reducing manual tasks by 40%.</li>
+                    <li>Led the design of the system’s user interface, improving usability and performance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education mb-5">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <h3>B.Tech, Computer Science & Engineering</h3>
+                <p><strong>Institution:</strong> SUIIT, Sambalpur | <strong>Duration:</strong> 2022 - 2026 | <strong>CGPA:</strong> 8.91/10</p>
+            </div>
+
+            <div class="edu-item">
+                <h3>Senior Secondary (XII)</h3>
+                <p><strong>Institution:</strong> SVRC, Balasore | <strong>Percentage:</strong> 92%</p>
+            </div>
+
+            <div class="edu-item">
+                <h3>Secondary (X)</h3>
+                <p><strong>Institution:</strong> RK New Govt High School | <strong>Percentage:</strong> 92.5%</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills mb-5">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Java, C, PHP, JavaScript, Python, Kotlin</li>
+                <li><strong>Web Development:</strong> HTML, CSS, Bootstrap, ReactJS, Node.js, Express.js</li>
+                <li><strong>Mobile App Development:</strong> React Native, Expo, Android (Java, Kotlin), iOS (Swift)</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB, Firebase</li>
+                <li><strong>Tools:</strong> GitHub, Firebase Cloud Messaging, Google Cloud, Docker</li>
+                <li><strong>Other:</strong> APIs, RESTful Services, AI, Machine Learning, Big Data Analytics</li>
+            </ul>
+        </section>
+        <section class="languages mb-5">
+            <h2>Languages</h2>
+            <ul>
+                <li><strong>English:</strong> Fluent (Written and Spoken)</li>
+                <li><strong>Hindi:</strong> Proficient (Written and Spoken)</li>
+                <li><strong>Odia:</strong> Native Speaker</li>
+            </ul>
+        </section>
+        <section class="projects mb-5">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3><a href="#">Technology-driven Learning</a></h3>
+                <p>Developed a platform for seamless and immersive online learning experiences, integrating AI tools for personalized education.</p>
+            </div>
+            <div class="project">
+                <h3><a href="#">Aedia | Social Multiverse</a></h3>
+                <p>A social platform for users to share photos, videos, and stories, engaging in multimedia content across the world.</p>
+            </div>
+            <div class="project">
+                <h3><a href="#">Amresh Gaming Site</a></h3>
+                <p>A collection of classic board games, offering unique challenges and multiplayer modes for friends and family.</p>
+            </div>
+            <div class="project">
+                <h3><a href="#">SUIIT Library Software</a></h3>
+                <p>Developed a library management system for SUIIT, streamlining resource management for 1,000+ students and faculty.</p>
+            </div>
+            <div class="project">
+                <h3><a href="#">Hostel Food Management System at XIM University</a></h3>
+                <p><strong>Project Type:</strong> Paid Project (In Progress)</p>
+                <p><strong>Start Date:</strong> January 2025</p>
+                <p>A web, Android, and iOS application that helps hostels manage food orders, menu tracking, and payment systems. The project is under development and aims to streamline food management processes for hostels.</p>
+            </div>
+        </section>
+        <footer class="text-center p-3  text-white">
+            <p>
+                <i class="bi bi-envelope-fill"></i> Email: 
+                <a href="mailto:amreshbhuyanone@gmail.com" class="text-white">amreshbhuyanone@gmail.com</a>
+            </p>
+            <p>
+                <i class="bi bi-telephone-fill"></i> Phone: 
+                <a href="tel:+917854998757" class="text-white">+91 7854998757</a>
+            </p>
+            <p>
+                <i class="bi bi-geo-alt-fill"></i> Location: Baripada
+            </p>
+            <p>
+                <a href="https://in.linkedin.com/in/amresh-bhuyan-aa0442298" target="_blank" class="text-white" >
+                    <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                </a>
+            </p>
+            <p>&copy; 2025 Amresh Bhuyan | All rights reserved</p>
+        </footer>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

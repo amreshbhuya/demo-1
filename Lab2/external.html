@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative External Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background-color: #00796b;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      margin: 0 15px;
+      padding: 10px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      padding: 80px 60px;
+      margin: 40px auto;
+      max-width: 1000px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #004d40;
+    }
+
+    .material-icons {
+      font-size: 30px;
+      color: #009688;
+    }
+
+    .jump-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #00695c;
+      background: #e0f2f1;
+      padding: 10px 18px;
+      border-radius: 30px;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .jump-link:hover {
+      background: #b2dfdb;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #004d40;
+      color: #fff;
+      border-top: 6px solid #009688;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Creative External Document</h1>
+    <nav>
+      <a href="#section1">Intro</a>
+      <a href="#section2">Features</a>
+      <a href="#section3">About</a>
+      <a href="#section4">Contact</a>
+    </nav>
+  </header>
+
+  <section id="section1">
+    <div class="section-header">
+      <span class="material-icons">rocket_launch</span> Section 1: Introduction
+    </div>
+    <p>Welcome to our external document! This is the introduction, where we describe what this page is about and what you'll find as you scroll down.</p>
+    <a class="jump-link" href="#section2">
+      <span class="material-icons">arrow_downward</span> Next: Features
+    </a>
+  </section>
+
+  <section id="section2">
+    <div class="section-header">
+      <span class="material-icons">check_circle</span> Section 2: Features
+    </div>
+    <p>This section covers some of the awesome features included in this demo — like smooth scroll, clean design, and Material UI icons.</p>
+    <a class="jump-link" href="#section3">
+      <span class="material-icons">arrow_downward</span> Next: About
+    </a>
+  </section>
+
+  <section id="section3">
+    <div class="section-header">
+      <span class="material-icons">info</span> Section 3: About
+    </div>
+    <p>Learn more about this project — built with pure HTML, CSS, and Google Material Icons for a clean, responsive, and beautiful design.</p>
+    <a class="jump-link" href="#section4">
+      <span class="material-icons">arrow_downward</span> Next: Contact
+    </a>
+  </section>
+
+  <section id="section4">
+    <div class="section-header">
+      <span class="material-icons">contacts</span> Section 4: Contact
+    </div>
+    <p>If you'd like to get in touch or learn more, reach out via email or connect on our social media pages. Thanks for visiting!</p>
+    <a class="jump-link" href="#section1">
+      <span class="material-icons">arrow_upward</span> Back to Top
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Creative External Doc. Made with 💚 and HTML + CSS.</p>
+  </footer>
+
+</body>
+</html>

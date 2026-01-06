@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUIIT Timetable</title>
+    <style>
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: #07629b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #000000;
+        }
+        th {
+            background-color: #0c5879;
+            color: #fff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #cdcdcd00;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .lunch-break {
+            background-color: #e0e0e0;
+            font-weight: bold;
+            display:none;
+        }
+        .teacher{
+            color: rgb(3, 140, 65);
+
+        }
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                font-weight: bold;
+            }
+            .lunch-break {
+                display:block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Sambalpur University of Information Technology</h2>
+    <h2>BT 6th Semester (CSE Section B)</h2>
+    <p>With effect from: 03-02-2025 to 22-02-2025</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Day/Time</th>
+                <th>09:00 - 10:00 AM (1)</th>
+                <th>10:00 - 11:00 AM (2)</th>
+                <th>11:00 - 12:00 PM (3)</th>
+                <th>12:00 - 01:00 PM (4)</th>
+                <th>01:00 - 02:00 PM</th>
+                <th>02:00 - 03:00 PM (5)</th>
+                <th>03:00 - 04:00 PM (6)</th>
+                <th>04:00 - 05:00 PM (7)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Day/Time">Monday</td>
+                <td data-label="09:00 - 10:00 AM (1)">DCCN <div class="teacher">(SR)</div> CR 5</td>
+                <td data-label="10:00 - 11:00 AM (2)">IoT <div class="teacher">(SPB)</div> CR 5</td>
+                <td data-label="11:00 - 12:00 PM (3)">--</td>
+                <td data-label="12:00 - 01:00 PM (4)">--</td>
+                <td  data-label="01:00 - 02:00 PM"  rowspan="6">Lunch Break</td>
+                <td data-label="02:00 - 05:00 PM (5)" colspan="3">SE LAB <div class="teacher">(PPS/JK/MM)</div> PL 1</td>
+            </tr>
+            <tr>
+                <td data-label="Day/Time">Tuesday</td>
+                <td data-label="09:00 - 10:00 AM (1)">IoT <div class="teacher">(SSP)</div> CR11</td>
+                <td data-label="10:00 - 11:00 AM (2)">DWDM <div class="teacher">(SR)</div> CR11</td>
+                <td data-label="11:00 - 12:00 PM (3)">DCCN <div class="teacher">(SKP)</div> CR11</td>
+                <td data-label="12:00 - 01:00 PM (4)">SE <div class="teacher">(SSP)</div> CR11</td>
+                <td class="lunch-break" data-label="01:00 - 02:00 PM">Lunch Break</td>
+                <td data-label="02:00 - 05:00 PM (5)" colspan="3" >DCCN Lab. <div class="teacher">(SR/MM/BT)</div> PL 1</td>
+
+            </tr>
+            <tr>
+                <td data-label="Day/Time">Wednesday</td>
+                <td data-label="09:00 - 10:00 AM (1)">--</td>
+                <td data-label="10:00 - 11:00 AM (2)">CC <div class="teacher">(PB)</div> CR13</td>
+                <td data-label="11:00 - 12:00 PM (3)">IoT <div class="teacher">(SPB)</div> CR13</td>
+                <td data-label="12:00 - 01:00 PM (4)">--</td>
+                <td class="lunch-break" data-label="01:00 - 02:00 PM">Lunch Break</td>
+                <td data-label="02:00 - 05:00 PM (5)" colspan="3">IWT Lab. <div class="teacher">(KM/MM/BT)</div> PL 1</td>
+ 
+            </tr>
+            <tr>
+                <td data-label="Day/Time">Thursday</td>
+                <td data-label="09:00 - 10:00 AM (1)">--</td>
+                <td data-label="10:00 - 11:00 AM (2)">SE <div class="teacher">(SSP)</div> CR 1</td>
+                <td data-label="11:00 - 12:00 PM (3)">CC <div class="teacher">(PB)</div> CR 1</td>
+                <td data-label="12:00 - 01:00 PM (4)">DWDM <div class="teacher">(SKP)</div> CR 1</td>
+                <td class="lunch-break" data-label="01:00 - 02:00 PM">Lunch Break</td>
+                <td data-label="02:00 - 03:00 PM (5)">--</td>
+                <td data-label="03:00 - 04:00 PM (6)">IWT <div class="teacher">(KM)</div> CR 3</td>
+                <td data-label="04:00 - 05:00 PM (7)">--</td>
+            </tr>
+            <tr>
+                <td data-label="Day/Time">Friday</td>
+                <td data-label="09:00 - 10:00 AM (1)">IWT <div class="teacher">(KM)</div> CR 5</td>
+                <td data-label="10:00 - 11:00 AM (2)">SST <div class="teacher">(AA)</div> CR 5</td>
+                <td data-label="11:00 - 12:00 PM (3)">CC <div class="teacher">(PB)</div> CR 5</td>
+                <td data-label="12:00 - 01:00 PM (4)">--</td>
+                <td class="lunch-break" data-label="01:00 - 02:00 PM">Lunch Break</td>
+                <td data-label="02:00 - 04:00 PM (5)" colspan="2">SS Practice <div class="teacher">(AA)</div> CR14</td>
+                <td data-label="04:00 - 05:00 PM (7)">--</td>
+            </tr>
+            <tr>
+                <td data-label="Day/Time">Saturday</td>
+                <td data-label="09:00 - 10:00 AM (1)">SE <div class="teacher">(SSP)</div> CR14</td>
+                <td data-label="10:00 - 11:00 AM (2)">IWT <div class="teacher">(KM)</div> CR 1</td>
+                <td data-label="11:00 - 12:00 PM (3)">DCCN <div class="teacher">(SR)</div> CR 1</td>
+                <td data-label="12:00 - 01:00 PM (4)">DWDM <div class="teacher">(SKP)</div> CR 1</td>
+                <td class="lunch-break" data-label="01:00 - 02:00 PM">Lunch Break</td>
+                <td data-label="02:00 - 03:00 PM (5)">SST <div class="teacher">(AA)</div> CR 1</td>
+                <td data-label="03:00 - 04:00 PM (6)">--</td>
+                <td data-label="04:00 - 05:00 PM (7)">--</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sl.</th>
+              <th>Teacher(s)</th>
+              <th>Group</th>
+              <th>Subject</th>
+              <th>Length</th>
+              <th>Lessons/week</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Dr. Nalini Kanta Badapanda</td>
+              <td>BE</td>
+              <td>Basic Electronics</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ms. Aishwarya Acharya</td>
+              <td>CE</td>
+              <td>Communicative English</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Dr. Rasmikanta Pati</td>
+              <td>MATH-I</td>
+              <td>Mathematics-I</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Dr. Vishwajeet Mukherjee</td>
+              <td>PHY-I</td>
+              <td>Physics-I</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Ms. Priyanka Priyadarshini</td>
+              <td>PPS</td>
+              <td>Programming for Problem Solving</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Dr. Nalini Kanta Badapanda, Dr. Subhranshu Padhee, Mr. Sidhartha Mishra, Mr. Swaroop Bhoi</td>
+              <td>Group 1</td>
+              <td>BE Lab. Basic Electronics Lab.</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Dr. Nalini Kanta Badapanda, Dr. Subhranshu Padhee, Mr. Sidhartha Mishra, Mr. Swaroop Bhoi</td>
+              <td>Group 2</td>
+              <td>BE Lab. Basic Electronics Lab.</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Ms. Aishwarya Acharya, Ms. Mamata Mohapatra</td>
+              <td>P Comm. Lab.</td>
+              <td>Professional Communication Lab.</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Ms. Priyanka Priyadarshini, Ms. Sudeshna Pattnaik</td>
+              <td>PIC Lab.</td>
+              <td>Programming in C Lab.</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+</body>
+</html>

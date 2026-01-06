@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palindrome Checker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #00695c;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #00796b;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🔁 Palindrome Checker</h2>
+    <input type="text" id="textInput" placeholder="Enter a word or phrase">
+    <button onclick="checkPalindrome()">Check</button>
+    <div class="result" id="output">Result will appear here...</div>
+  </div>
+
+  <script>
+    function checkPalindrome() {
+      const input = document.getElementById("textInput").value;
+      const cleanInput = input.toLowerCase().replace(/[^a-z0-9]/gi, '');
+      const reversed = cleanInput.split('').reverse().join('');
+      const output = document.getElementById("output");
+
+      if (cleanInput === "") {
+        output.innerText = "❌ Please enter something!";
+      } else if (cleanInput === reversed) {
+        output.innerText = `✅ "${input}" is a Palindrome!`;
+      } else {
+        output.innerText = `❌ "${input}" is NOT a Palindrome.`;
+      }
+    }
+  </script>
+
+</body>
+</html>
